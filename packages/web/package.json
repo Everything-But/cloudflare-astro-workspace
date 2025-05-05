@@ -1,0 +1,39 @@
+{
+	"name": "web",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"astro": "astro",
+		"build": "astro build",
+		"cf-typegen": "wrangler types",
+		"codegen": "npx graphql-codegen --config codegen.ts",
+		"deploy": "astro build && wrangler pages deploy",
+		"dev": "astro dev",
+		"preview": "astro build && wrangler pages dev"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^12.5.2",
+		"@astrojs/react": "^4.2.7",
+		"@graphql-codegen/typed-document-node": "^5.1.1",
+		"@hookform/resolvers": "^4.1.3",
+		"@tailwindcss/vite": "^4.0.9",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@urql/core": "^5.1.1",
+		"astro": "^5.7.10",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"react-hook-form": "^7.54.2",
+		"tailwindcss": "^4.0.9",
+		"urql": "^4.2.2",
+		"zod": "^3.24.2"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250214.0",
+		"@graphql-codegen/cli": "^5.0.5",
+		"@graphql-codegen/client-preset": "^4.8.0",
+		"graphql": "^16.10.0",
+		"typescript": "^5.8.3",
+		"wrangler": "^3.109.2"
+	}
+}

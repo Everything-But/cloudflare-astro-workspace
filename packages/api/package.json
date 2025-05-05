@@ -1,0 +1,35 @@
+{
+	"name": "api",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"cf-typegen": "wrangler types",
+		"codegen": "npx graphql-codegen",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "drizzle-kit migrate",
+		"db:push": "drizzle-kit push",
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.6.4",
+		"@cloudflare/workers-types": "^4.20250214.0",
+		"@eddeee888/gcg-typescript-resolver-files": "0.11.0",
+		"@graphql-codegen/cli": "5.0.3",
+		"drizzle-kit": "^0.30.4",
+		"typescript": "^5.5.2",
+		"vitest": "~2.1.9",
+		"wrangler": "^4.14.1"
+	},
+	"dependencies": {
+		"@neondatabase/serverless": "^0.10.4",
+		"dotenv": "^16.4.7",
+		"drizzle-graphql": "^0.8.5",
+		"drizzle-orm": "^0.39.3",
+		"graphql": "^16.10.0",
+		"graphql-yoga": "^5.13.2",
+		"hono": "^4.7.5"
+	}
+}

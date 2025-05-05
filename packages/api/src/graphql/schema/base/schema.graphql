@@ -1,0 +1,64 @@
+type Query {
+  event(id: ID!): Event
+  events(filter: eventFilter): [Event!]
+  user(id: ID!): User
+  users(filter: userFilter): [User!]
+}
+
+type Mutation {
+  createEvent(record: eventRecord): Event
+  createUser(record: userRecord): User
+}
+
+type Event {
+  id: ID!
+  createdAt: String
+  createdBy: String
+  endTime: String
+  name: String
+  slug: String
+  startTime: String
+  timezone: String
+  updatedAt: String
+}
+
+type User {
+  id: ID!
+  createdAt: String
+  password: String
+  role: String
+  username: String
+}
+
+input eventFilter {
+  id: ID
+  createdAt: String
+  createdBy: String
+  endTime: String
+  name: String
+  slug: String
+  startTime: String
+  timezone: String
+  updatedAt: String
+}
+
+input eventRecord {
+  endTime: String!
+  name: String!
+  slug: String!
+  startTime: String!
+  timezone: String!
+}
+
+input userFilter {
+  id: ID
+  role: String
+}
+
+input userRecord {
+  id: ID
+  createdAt: String
+  password: String!
+  role: String
+  username: String!
+}

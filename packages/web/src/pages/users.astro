@@ -1,0 +1,13 @@
+---
+import { actions } from 'astro:actions'
+import Layout from '../layouts/Layout.astro'
+import PageError from '../components/PageError'
+import UserList from '../components/UserList'
+
+// const { data, error } = await Astro.callAction(actions.user.getUser, {})
+---
+
+<Layout pageTitle={'User'}>
+  <!-- {!error ? <UserList users={data} /> : <PageError client:load error={{}} />} -->
+  <UserList client:load />
+</Layout>

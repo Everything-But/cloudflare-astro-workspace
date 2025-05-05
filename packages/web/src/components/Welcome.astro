@@ -1,0 +1,26 @@
+---
+
+---
+
+<form>
+  <label for='email'>E-mail</label>
+  <input id='email' required type='email' name='email' />
+  <label>
+    <input required type='checkbox' name='terms' />
+    I agree to the terms of service
+  </label>
+  <button>Sign up</button>
+</form>
+
+<!-- <script>
+  import { actions } from 'astro:actions'
+  import { navigate } from 'astro:transitions/client'
+
+  const form = document.querySelector('form')
+  form?.addEventListener('submit', async (event) => {
+    event.preventDefault()
+    const formData = new FormData(form)
+    const { error } = await actions.newsletter(formData)
+    if (!error) navigate('/confirmation')
+  })
+</script> -->

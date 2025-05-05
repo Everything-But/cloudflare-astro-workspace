@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# add ignore file from chatgpt answer from this line
+packages/api/migrations/meta/
+
+packages/web/schema.graphql
+packages/web/src/gql/
+packages/web/src/graphql/*.ts
+!packages/web/src/graphql/execute.ts

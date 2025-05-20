@@ -4,11 +4,11 @@ import EventList from '../../components/EventList'
 import PageError from '../../components/PageError'
 import Layout from '../../layouts/Layout.astro'
 
-// const { data = [], error } = await Astro.callAction(actions.event.getEvent, {})
+const { data = [], error } = await Astro.callAction(actions.event.getEvent, {})
 // const { data = [], error } = await Astro.callAction(actions.event.getEventGql, {})
 ---
 
 <Layout pageTitle={'Event'}>
-  <!-- {!error ? <EventList client:load events={data} /> : <PageError client:load error={{}} />} -->
-  <EventList client:load />
+  {!error ? <EventList client:load events={data} /> : <PageError client:load error={{}} />}
+  <!-- <EventList client:load /> -->
 </Layout>

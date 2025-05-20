@@ -1,7 +1,9 @@
 import { WorkerEntrypoint } from 'cloudflare:workers'
 import { eq } from 'drizzle-orm'
+import { Hono } from 'hono'
 import { connect } from './db'
 import { eventsTable, InsertEvent, InsertUser, SelectEvent, SelectUser, usersTable } from './db/schema'
+import { yoga } from './graphql'
 
 /**
  * Welcome to Cloudflare Workers! This is your first worker.
@@ -15,9 +17,6 @@ import { eventsTable, InsertEvent, InsertUser, SelectEvent, SelectUser, usersTab
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-
-import { Hono } from 'hono'
-import { yoga } from './graphql'
 
 const app = new Hono()
 app.all('/graphql', async (c) => {

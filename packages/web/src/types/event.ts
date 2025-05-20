@@ -32,6 +32,17 @@ const getEventInput = z.object({
 
 type CreateEventInputType = z.infer<typeof createEventInput>
 type GetEventInputType = z.infer<typeof getEventInput>
+type EventType = {
+  id: string
+  createdAt: string
+  createdBy: string
+  endTime: string
+  name: string
+  slug: string
+  startTime: string
+  timezone: string
+  updatedAt: string
+}
 
-export type { CreateEventInputType, GetEventInputType }
+export type { CreateEventInputType, EventType, GetEventInputType }
 export { createEventInput, getEventInput }
